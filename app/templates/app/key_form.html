@@ -1,0 +1,23 @@
+<h1>New Key Entry</h1>
+<form method="POST">{% csrf_token %}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>{{ form.key_name }}</td>
+        </tr>
+        <tr>
+            <td>Owner</td>
+            <td>:</td>
+            <td>{{ form.key_owner }}</td>
+        </tr>
+        <tr>
+            <td>Current Location</td>
+            <td>:</td>
+            <td>{{ form.key_location }}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+    </table>
+</form>

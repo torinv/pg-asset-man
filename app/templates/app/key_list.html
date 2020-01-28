@@ -1,0 +1,26 @@
+<h1>All Keys</h1>
+<a href="{% url 'key_new' %}">Create New Key</a><br><br>
+<b> GO TO: </b><a href="{% url 'item_list' %}">Items</a>&nbsp;&nbsp;<a href="{% url 'card_list' %}">Cards</a><br>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Owner</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+    {% for key in object_list %}
+    <tr>
+        <td>
+            <a href="{% url 'key_detail' key.key_id %}">{{ key.key_name }}</a>
+        </td>
+        <td>{{ key.get_key_owner_display }}</td>
+        <td>{{ key.key_location }}</td>
+        <td>
+            <a href="{% url 'key_edit' key.key_id %}">Edit</a>
+            <a href="{% url 'key_delete' key.key_id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3"><b>No keys to display.  Add some!</b></td></tr>
+    {% endfor %}
+</table>

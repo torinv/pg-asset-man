@@ -1,0 +1,26 @@
+<h1>All Cards</h1>
+<a href="{% url 'card_new' %}">Create New Card</a><br><br>
+<b> GO TO: </b><a href="{% url 'item_list' %}">Items</a>&nbsp;&nbsp;<a href="{% url 'key_list' %}">Keys</a><br>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Owner</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+    {% for card in object_list %}
+    <tr>
+        <td>
+            <a href="{% url 'card_detail' card.card_id %}">{{ card.card_name }}</a>
+        </td>
+        <td>{{ card.get_card_owner_display }}</td>
+        <td>{{ card.card_location }}</td>
+        <td>
+            <a href="{% url 'card_edit' card.card_id %}">Edit</a>
+            <a href="{% url 'card_delete' card.card_id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3"><b>No cards to display.  Add some!</b></td></tr>
+    {% endfor %}
+</table>

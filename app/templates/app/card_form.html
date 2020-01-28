@@ -1,0 +1,23 @@
+<h1>New Card Entry</h1>
+<form method="POST">{% csrf_token %}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>{{ form.card_name }}</td>
+        </tr>
+        <tr>
+            <td>Owner</td>
+            <td>:</td>
+            <td>{{ form.card_owner }}</td>
+        </tr>
+        <tr>
+            <td>Current Location</td>
+            <td>:</td>
+            <td>{{ form.card_location }}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+    </table>
+</form>

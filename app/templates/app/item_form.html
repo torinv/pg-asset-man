@@ -1,0 +1,28 @@
+<h1>New Item Entry</h1>
+<form method="POST">{% csrf_token %}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>{{ form.item_name }}</td>
+        </tr>
+        <tr>
+            <td>Current Location</td>
+            <td>:</td>
+            <td>{{ form.item_location }}</td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td>:</td>
+            <td>{{ form.item_qty }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>:</td>
+            <td>{{ form.item_longdescription }}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+    </table>
+</form>

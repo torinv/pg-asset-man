@@ -1,0 +1,26 @@
+<h1>All Items</h1>
+<a href="{% url 'item_new' %}">Create New Item</a><br><br>
+<b> GO TO: </b><a href="{% url 'key_list' %}">Keys</a>&nbsp;&nbsp;<a href="{% url 'card_list' %}">Cards</a><br>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+    </tr>
+    {% for item in object_list %}
+    <tr>
+        <td>
+            <a href="{% url 'item_detail' item.item_id %}">{{ item.item_name }}</a>
+        </td>
+        <td>{{ item.item_location }}</td>
+        <td>{{ item.item_qty }}</td>
+        <td>
+            <a href="{% url 'item_edit' item.item_id %}">Edit</a>
+            <a href="{% url 'item_delete' item.item_id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3"><b>No items to display.  Add some!</b></td></tr>
+    {% endfor %}
+</table>
