@@ -20,18 +20,37 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'key_list' %}" <span class="sr-only"> Keys</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'card_list' %}" Cards <span class="sr-only"> Cards</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'card_list' %}" Cards <span class="sr-only">> Cards</span></a>
       </li>
     </ul>
   </div>
 </nav><br>
 
-<h1>Item Detail</h1>
-<h3><b>Name</b> : {{ object.item_name }}</h3>
-<h3><b>Location</b> : {{ object.item_location }}</h3>
-<h3><b>Quantity</b> : {{ object.item_qty }}</h3>
-<h3><b>Description</b> : {{ object.item_longdescription }}</h3>
+<h1> Key Search Results </h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Owner</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+    {% for key in object_list %}
+    <tr>
+        <td>
+            <a href="{% url 'key_detail' key.key_id %}">{{ key.key_name }}</a>
+        </td>
+        <td>{{ key.get_key_owner_display }}</td>
+        <td>{{ key.key_location }}</td>
+        <td>
+            <a href="{% url 'key_edit' key.key_id %}">Edit</a>
+            <a href="{% url 'key_delete' key.key_id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="4"><b>--- No results found :( ---</b></td></tr>
+    {% endfor %}
+</table>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

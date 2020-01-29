@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
+<style> .flex{display:flex;}</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'item_list' %}">
     <img src="{% static  'rho_gamma_logo.jpg' %}" width="30" height="30" alt="">
@@ -27,10 +29,17 @@
   </div>
 </nav><br>
 
+<div class="flex">
 <a class="btn btn-primary" href="{% url 'item_new' %}" role="button">
     <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
     Create New Item
-</a><br><br>
+</a>&nbsp;&nbsp;&nbsp;
+<form action="{% url 'item_search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search items... ">
+</form>
+</div>
+
+<br>
 <table border="1">
     <tr>
         <th>Name</th>

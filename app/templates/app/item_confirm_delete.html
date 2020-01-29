@@ -29,8 +29,8 @@
 
 <form method="post">{% csrf_token %}
     Are you sure you want to delete "{{ object }}" ?<br><br>
-    <input type="submit" value="Delete" />
-    <a href="{% url 'item_list' %}">Cancel</a>
+    <input class="btn btn-danger" type="submit" value="Delete" />
+    <a class="btn btn-primary" href="{% url 'item_list' %}">Cancel</a>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

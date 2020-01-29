@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.db.models import Q
 
 from .models import Key
 from .models import Card
@@ -29,6 +30,20 @@ class ItemDelete(DeleteView):
 	model = Item
 	success_url = reverse_lazy('item_list')
 
+class ItemSearchResultsView(ListView):
+	model = Item
+	template_name = 'app/item_search_results.html'
+
+	def get_queryset(self):
+		if self.request.GET.get('q'):
+			query = self.request.GET.get('q')
+			object_list = Item.objects.filter(
+				Q(item_name__icontains=query) | Q(item_longdescription__icontains=query)
+			)
+			return object_list
+
+		else: raise ValueError("Invalid search query")
+
 
 # Keys views
 class KeyList(ListView):
@@ -51,6 +66,20 @@ class KeyDelete(DeleteView):
 	model = Key
 	success_url = reverse_lazy('key_list')
 
+class KeySearchResultsView(ListView):
+	model = Key
+	template_name = 'app/key_search_results.html'
+
+	def get_queryset(self):
+		if self.request.GET.get('q'):
+			query = self.request.GET.get('q')
+			object_list = Key.objects.filter(
+				Q(key_name__icontains=query) | Q(key_owner__icontains=query)
+			)
+			return object_list
+
+		else: raise ValueError("Invalid search query")
+
 
 # Cards views
 class CardList(ListView):
@@ -72,3 +101,17 @@ class CardUpdate(UpdateView):
 class CardDelete(DeleteView):
 	model = Card
 	success_url = reverse_lazy('card_list')
+
+class CardSearchResultsView(ListView):
+	model = Card
+	template_name = 'app/card_search_results.html'
+
+	def get_queryset(self):
+		if self.request.GET.get('q'):
+			query = self.request.GET.get('q')
+			object_list = Card.objects.filter(
+				Q(card_name__icontains=query) | Q(card_owner__icontains=query)
+			)
+			return object_list
+
+		else: raise ValueError("Invalid search query")
