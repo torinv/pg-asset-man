@@ -12,10 +12,9 @@ import sys
 from django.core.wsgi import get_wsgi_application
 
 # stuff from stack overflow
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-os.path.join(BASE_DIR, "assman")
-sys.path.append(BASE_DIR)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'assman.settings'
+path = '/opt/python/current/app/assman'
+if path not in sys.path:
+	sys.path.append(path)
 
 # Default stuff
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'assman.settings')
