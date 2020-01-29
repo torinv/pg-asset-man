@@ -12,7 +12,7 @@ import sys
 from django.core.wsgi import get_wsgi_application
 
 # stuff from stack overflow
-path = '/opt/python/current/app/assman'
+path = '/opt/python/current/app/assman_app/'
 if path not in sys.path:
 	sys.path.append(path)
 
