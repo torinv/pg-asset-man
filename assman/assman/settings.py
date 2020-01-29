@@ -25,7 +25,7 @@ SECRET_KEY = 'ltiwvm5=9-1g*(5zwc7bz!35znr9dw497)vr2!y_bt-t#sg9pi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-env.tbnbsk3abq.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -83,6 +83,7 @@ DATABASES = {
 
 # Static file location
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
 
 
 # Password validation
