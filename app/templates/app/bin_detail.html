@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block binactive %} active{% endblock %}
+{% block binactive %} >{% endblock %}
+
+{% block content %}
+<h1>Key Detail</h1>
+<h3><b>Name</b> : {{ object.bin_name }}</h3>
+<h3><b>Location</b> : {{ object.bin_location }}</h3>
+<h3><b>Contents</b> : {{ object.bin_contents }}</h3>
+{% endblock %}

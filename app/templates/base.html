@@ -9,7 +9,6 @@
 </head>
 
 <style> .flex{display:flex;}</style>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'item_list' %}">
     <img src="{% static  'rho_gamma_logo.jpg' %}" width="30" height="30" alt="">
@@ -24,14 +23,20 @@
       <li class="nav-item">
         <span class="nav-link"> <b>Hello, {{ user.username }}! </b></span>
       </li>
-      <li class="nav-item{% block itemactive %}{% endblock %}">
-        <a class="nav-link" href="{% url 'item_list' %}" <span class="sr-only">{% block itemcarrot %}{% endblock %} Items</span></a>
-      </li>
       <li class="nav-item{% block keyactive %}{% endblock %}">
         <a class="nav-link" href="{% url 'key_list' %}" <span class="sr-only">{% block keycarrot %}{% endblock %} Keys</span></a>
       </li>
+      <li class="nav-item{% block binactive %}{% endblock %}">
+        <a class="nav-link" href="{% url 'bin_list' %}" <span class="sr-only">{% block bincarrot %}{% endblock %} Bins</span></a>
+      </li>
+      <li class="nav-item{% block itemactive %}{% endblock %}">
+        <a class="nav-link" href="{% url 'item_list' %}" <span class="sr-only">{% block itemcarrot %}{% endblock %} Items</span></a>
+      </li>
       <li class="nav-item{% block cardactive %}{% endblock %}">
         <a class="nav-link" href="{% url 'card_list' %}" Cards <span class="sr-only">{% block cardcarrot %}{% endblock %} Cards</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-danger" href="{% url 'logout' %}" role="button">Logout</a>
       </li>
     </ul>
   </div>

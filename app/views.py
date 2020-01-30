@@ -4,11 +4,22 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.db.models import Q
+from django import forms
 
 from .models import Key
 from .models import Card
 from .models import Item
+from .models import Bin
 
+# Custom item form class
+class ItemForm(forms.ModelForm):
+	class Meta:
+		model = Item
+		fields = ['item_name', 'item_location', 'item_qty', 'item_longdescription']
+		widgets = {
+			'item_longdescription' : forms.Textarea()
+		}
+		
 # Items views
 class ItemList(ListView):
 	model = Item
@@ -18,12 +29,12 @@ class ItemDetail(DetailView):
 
 class ItemCreate(CreateView):
 	model = Item
-	fields = ['item_name', 'item_location', 'item_qty', 'item_longdescription']
+	form_class = ItemForm
 	success_url = reverse_lazy('item_list')
 
 class ItemUpdate(UpdateView):
 	model = Item
-	fields = ['item_name', 'item_location', 'item_qty', 'item_longdescription']
+	form_class = ItemForm
 	success_url = reverse_lazy('item_list')
 
 class ItemDelete(DeleteView):
@@ -111,6 +122,50 @@ class CardSearchResultsView(ListView):
 			query = self.request.GET.get('q')
 			object_list = Card.objects.filter(
 				Q(card_name__icontains=query) | Q(card_owner__icontains=query)
+			)
+			return object_list
+
+		else: raise ValueError("Invalid search query")
+
+
+class BinForm(forms.ModelForm):
+	class Meta:
+		model = Bin
+		fields = ['bin_name', 'bin_location', 'bin_contents' ]
+		widgets = {
+			'bin_contents' : forms.Textarea()
+		}
+
+# Items views
+class BinList(ListView):
+	model = Bin
+
+class BinDetail(DetailView):
+	model = Bin
+
+class BinCreate(CreateView):
+	model = Bin
+	form_class = BinForm
+	success_url = reverse_lazy('bin_list')
+
+class BinUpdate(UpdateView):
+	model = Bin
+	form_class = BinForm
+	success_url = reverse_lazy('bin_list')
+
+class BinDelete(DeleteView):
+	model = Bin
+	success_url = reverse_lazy('bin_list')
+
+class BinSearchResultsView(ListView):
+	model = Bin
+	template_name = 'app/bin_search_results.html'
+
+	def get_queryset(self):
+		if self.request.GET.get('q'):
+			query = self.request.GET.get('q')
+			object_list = Bin.objects.filter(
+				Q(bin_name__icontains=query) | Q(bin_contents__icontains=query)
 			)
 			return object_list
 
