@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ltiwvm5=9-1g*(5zwc7bz!35znr9dw497)vr2!y_bt-t#sg9pi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'pgassman.herokuapp.com',
-    'localhost'
+    '127.0.0.1'
 ]
 
 LOGIN_REDIRECT_URL = '/'
@@ -93,7 +93,7 @@ DATABASES = {
 # Static file location
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "app/static")]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
