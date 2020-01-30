@@ -4,7 +4,7 @@
 {% block bincarrot %} >{% endblock %}
 
 {% block content %}
-<h1> bin Search Results </h1>
+<h1> Bin Search Results </h1>
 <table border="1">
     <tr>
         <th>Name</th>
@@ -18,7 +18,7 @@
             <a href="{% url 'bin_detail' bin.bin_id %}">{{ bin.bin_name }}</a>
         </td>
         <td>{{ bin.bin_location }}</td>
-        <td>{{ bin.bin_actions }}</td>
+        <td>{{ bin.bin_contents }}</td>
         <td>
             <a href="{% url 'bin_edit' bin.bin_id %}">Edit</a>
             <a href="{% url 'bin_delete' bin.bin_id %}">Delete</a>
