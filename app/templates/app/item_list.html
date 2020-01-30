@@ -4,7 +4,7 @@
 {% block itemcarrot %} >{% endblock %}
 
 {% block content %}
-{% if perms.app.create_item %}
+{% if perms.app.add_item %}
     <div class="flex">
     <a class="btn btn-primary" href="{% url 'item_new' %}" role="button">
         <img src="{% static 'plus.svg' %}" width="27" height="27"></img>

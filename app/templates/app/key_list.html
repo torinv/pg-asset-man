@@ -4,7 +4,7 @@
 {% block keycarrot %} >{% endblock %}
 
 {% block content %}
-{% if perms.app.create_key %}
+{% if perms.app.add_key %}
     <div class="flex">
     <a class="btn btn-primary" href="{% url 'key_new' %}" role="button">
         <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
