@@ -1,0 +1,38 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'item_list' %}">
+    <img src="{% static  'rho_gamma_logo.jpg' %}" width="30" height="30" alt="">
+    <b>Rho Gamma</b>
+    <i>ASSet MANager</i>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'item_list' %}" <span class="sr-only"> Items</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'key_list' %}" <span class="sr-only"> Keys</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'card_list' %}" Cards <span class="sr-only"> Cards</span></a>
+      </li>
+    </ul>
+  </div>
+</nav><br>
+
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}
