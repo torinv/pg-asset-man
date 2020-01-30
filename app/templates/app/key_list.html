@@ -32,7 +32,7 @@
         <td>{{ key.get_key_owner_display }}</td>
         <td>{{ key.key_location }}</td>
         <td>
-            {% if perms.app.edit_key %}
+            {% if perms.app.change_key %}
                 <a href="{% url 'key_edit' key.key_id %}">Edit</a>
             {% endif %}
             {% if perms.app.delete_key %}

@@ -32,7 +32,7 @@
         <td>{{ bin.bin_location }}</td>
         <td>{{ bin.bin_contents }}</td>
         <td>
-            {% if perms.app.edit_bin %}
+            {% if perms.app.change_bin %}
                 <a href="{% url 'bin_edit' bin.bin_id %}">Edit</a>
             {% endif %}
             {% if perms.app.delete_bin %}

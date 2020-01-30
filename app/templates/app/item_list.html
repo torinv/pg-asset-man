@@ -32,7 +32,7 @@
         <td>{{ item.item_location }}</td>
         <td>{{ item.item_qty }}</td>
         <td>
-            {% if perms.app.edit_item %}
+            {% if perms.app.change_item %}
                 <a href="{% url 'item_edit' item.item_id %}">Edit</a>
             {% endif %}
             {% if perms.app.delete_item %}
