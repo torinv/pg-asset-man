@@ -4,11 +4,13 @@
 {% block keycarrot %} >{% endblock %}
 
 {% block content %}
-<div class="flex">
-<a class="btn btn-primary" href="{% url 'key_new' %}" role="button">
-    <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
-    Create New Key
-</a>&nbsp;&nbsp;&nbsp;
+{% if perms.app.create_key %}
+    <div class="flex">
+    <a class="btn btn-primary" href="{% url 'key_new' %}" role="button">
+        <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
+        Create New Key
+    </a>&nbsp;&nbsp;&nbsp;
+{% endif %}
 <form action="{% url 'key_search_results' %}" method="get">
   <input name="q" type="text" placeholder="Search keys... ">
 </form>
@@ -30,8 +32,12 @@
         <td>{{ key.get_key_owner_display }}</td>
         <td>{{ key.key_location }}</td>
         <td>
-            <a href="{% url 'key_edit' key.key_id %}">Edit</a>
-            <a href="{% url 'key_delete' key.key_id %}">Delete</a>
+            {% if perms.app.edit_key %}
+                <a href="{% url 'key_edit' key.key_id %}">Edit</a>
+            {% endif %}
+            {% if perms.app.delete_key %}
+                <a href="{% url 'key_delete' key.key_id %}">Delete</a>
+            {% endif %}
         </td>
     </tr>
     {% empty %}

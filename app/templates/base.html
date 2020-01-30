@@ -17,8 +17,8 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       {% if user.is_authenticated %}
-      <li class="nav-item">
-        <span class="nav-link"> <b>Hello, {{ user.username }}! </b></span>
+      <li class="nav-item active">
+        <span class="nav-link"> Hello, {{ user.username }}! </span>
       </li>
       <li class="nav-item{% block keyactive %}{% endblock %}">
         <a class="nav-link" href="{% url 'key_list' %}" <span class="sr-only">{% block keycarrot %}{% endblock %} Keys</span></a>
@@ -42,9 +42,6 @@
 
 {% if user.is_authenticated %}
   {% block content %}{% endblock %}
-{% else %}
-  <h3>You are not logged in</h3>
-  <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
 {% endif %}
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

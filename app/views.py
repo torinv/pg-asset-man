@@ -1,17 +1,17 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django import forms
+from django.template import RequestContext
+from django.views.defaults import page_not_found
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
-from .models import Key
-from .models import Card
-from .models import Item
-from .models import Bin
+from .models import Key, Card, Bin, Item
 
-# Custom item form class
+# Custom form classes
 class ItemForm(forms.ModelForm):
 	class Meta:
 		model = Item
@@ -19,29 +19,40 @@ class ItemForm(forms.ModelForm):
 		widgets = {
 			'item_longdescription' : forms.Textarea()
 		}
+
+class BinForm(forms.ModelForm):
+	class Meta:
+		model = Bin
+		fields = ['bin_name', 'bin_location', 'bin_contents' ]
+		widgets = {
+			'bin_contents' : forms.Textarea()
+		}
 		
 # Items views
-class ItemList(ListView):
+class ItemList(LoginRequiredMixin, ListView):
 	model = Item
 
-class ItemDetail(DetailView):
+class ItemDetail(LoginRequiredMixin, DetailView):
 	model = Item
 
-class ItemCreate(CreateView):
-	model = Item
-	form_class = ItemForm
-	success_url = reverse_lazy('item_list')
-
-class ItemUpdate(UpdateView):
+class ItemCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+	permission_required = 'item.can_add'
 	model = Item
 	form_class = ItemForm
 	success_url = reverse_lazy('item_list')
 
-class ItemDelete(DeleteView):
+class ItemUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+	permission_required = 'item.can_change'
+	model = Item
+	form_class = ItemForm
+	success_url = reverse_lazy('item_list')
+
+class ItemDelete(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
+	permission_required = 'item.can_delete'
 	model = Item
 	success_url = reverse_lazy('item_list')
 
-class ItemSearchResultsView(ListView):
+class ItemSearchResultsView(LoginRequiredMixin, ListView):
 	model = Item
 	template_name = 'app/item_search_results.html'
 
@@ -57,27 +68,30 @@ class ItemSearchResultsView(ListView):
 
 
 # Keys views
-class KeyList(ListView):
+class KeyList(LoginRequiredMixin, ListView):
 	model = Key
 
-class KeyDetail(DetailView):
+class KeyDetail(LoginRequiredMixin, DetailView):
 	model = Key
 
-class KeyCreate(CreateView):
+class KeyCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+	permission_required = 'key.can_add'
 	model = Key
 	fields = ['key_name', 'key_location', 'key_owner']
 	success_url = reverse_lazy('key_list')
 
-class KeyUpdate(UpdateView):
+class KeyUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+	permission_required = 'key.can_change'
 	model = Key
 	fields = ['key_name', 'key_owner', 'key_location']
 	success_url = reverse_lazy('key_list')
 
-class KeyDelete(DeleteView):
+class KeyDelete(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
+	permission_required = 'key.can_delete'
 	model = Key
 	success_url = reverse_lazy('key_list')
 
-class KeySearchResultsView(ListView):
+class KeySearchResultsView(LoginRequiredMixin, ListView):
 	model = Key
 	template_name = 'app/key_search_results.html'
 
@@ -93,27 +107,30 @@ class KeySearchResultsView(ListView):
 
 
 # Cards views
-class CardList(ListView):
+class CardList(LoginRequiredMixin, ListView):
 	model = Card
 
-class CardDetail(DetailView):
+class CardDetail(LoginRequiredMixin, DetailView):
 	model = Card
 
-class CardCreate(CreateView):
-	model = Card
-	fields = ['card_name', 'card_owner', 'card_location']
-	success_url = reverse_lazy('card_list')
-
-class CardUpdate(UpdateView):
+class CardCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+	permission_required = 'card.can_add'
 	model = Card
 	fields = ['card_name', 'card_owner', 'card_location']
 	success_url = reverse_lazy('card_list')
 
-class CardDelete(DeleteView):
+class CardUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+	permission_required = 'card.can_change'
+	model = Card
+	fields = ['card_name', 'card_owner', 'card_location']
+	success_url = reverse_lazy('card_list')
+
+class CardDelete(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
+	permission_required = 'card.can_delete'
 	model = Card
 	success_url = reverse_lazy('card_list')
 
-class CardSearchResultsView(ListView):
+class CardSearchResultsView(LoginRequiredMixin, ListView):
 	model = Card
 	template_name = 'app/card_search_results.html'
 
@@ -128,36 +145,31 @@ class CardSearchResultsView(ListView):
 		else: raise ValueError("Invalid search query")
 
 
-class BinForm(forms.ModelForm):
-	class Meta:
-		model = Bin
-		fields = ['bin_name', 'bin_location', 'bin_contents' ]
-		widgets = {
-			'bin_contents' : forms.Textarea()
-		}
-
 # Items views
-class BinList(ListView):
+class BinList(LoginRequiredMixin, ListView):
 	model = Bin
 
-class BinDetail(DetailView):
+class BinDetail(LoginRequiredMixin, DetailView):
 	model = Bin
 
-class BinCreate(CreateView):
-	model = Bin
-	form_class = BinForm
-	success_url = reverse_lazy('bin_list')
-
-class BinUpdate(UpdateView):
+class BinCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+	permission_required = 'bin.can_add'
 	model = Bin
 	form_class = BinForm
 	success_url = reverse_lazy('bin_list')
 
-class BinDelete(DeleteView):
+class BinUpdate(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
+	permission_required = 'bin.can_change'
+	model = Bin
+	form_class = BinForm
+	success_url = reverse_lazy('bin_list')
+
+class BinDelete(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
+	permission_required = 'bin.can_delete'
 	model = Bin
 	success_url = reverse_lazy('bin_list')
 
-class BinSearchResultsView(ListView):
+class BinSearchResultsView(LoginRequiredMixin, ListView):
 	model = Bin
 	template_name = 'app/bin_search_results.html'
 
@@ -170,3 +182,16 @@ class BinSearchResultsView(ListView):
 			return object_list
 
 		else: raise ValueError("Invalid search query")
+
+
+# Custom error views
+def handler403(request, exception):
+	return render_to_response('app/403.html')
+
+def handler404(request, exception):
+	return render(request, 'app/404.html')
+
+def handler500(request):
+	response = render_to_response("app/500.html")
+	response.status_code = 500
+	return response

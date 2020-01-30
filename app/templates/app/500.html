@@ -1,0 +1,8 @@
+{% extends 'error_base.html' %}
+{% load static %}
+
+{% block errorcontent %}
+<h1>500: Server Error</h1><br>
+Something funky happened in the backend.  My bad.  <br>
+If you feel so inclined, <a href="mailto:tvermettewps@gmail.com?subject=Assman 500 Error from {{ user.username }}">click here</a> and let me know exactly what you were doing when you received this error.
+{% endblock %}

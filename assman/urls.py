@@ -20,5 +20,9 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include ('django.contrib.auth.urls')),
-    path('', include('app.urls'))
+    path('', include('app.urls')),
 ]
+
+handler403 = 'app.views.handler403'
+handler404 = 'app.views.handler404'
+handler500 = 'app.views.handler500'

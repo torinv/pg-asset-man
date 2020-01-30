@@ -4,11 +4,13 @@
 {% block cardcarrot %} >{% endblock %}
 
 {% block content %}
-<div class="flex">
-<a class="btn btn-primary" href="{% url 'card_new' %}" role="button">
-    <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
-    Create New Card
-</a>&nbsp;&nbsp;&nbsp;
+{% if perms.app.create_card %}
+    <div class="flex">
+    <a class="btn btn-primary" href="{% url 'card_new' %}" role="button">
+        <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
+        Create New Card
+    </a>&nbsp;&nbsp;&nbsp;
+{% endif %}
 <form action="{% url 'card_search_results' %}" method="get">
   <input name="q" type="text" placeholder="Search cards... ">
 </form>
@@ -30,8 +32,12 @@
         <td>{{ card.get_card_owner_display }}</td>
         <td>{{ card.card_location }}</td>
         <td>
-            <a href="{% url 'card_edit' card.card_id %}">Edit</a>
-            <a href="{% url 'card_delete' card.card_id %}">Delete</a>
+            {% if perms.app.edit_card %}
+                <a href="{% url 'card_edit' card.card_id %}">Edit</a>
+            {% endif %}
+            {% if perms.app.delete_card %}
+                <a href="{% url 'card_delete' card.card_id %}">Delete</a>
+            {% endif %}
         </td>
     </tr>
     {% empty %}

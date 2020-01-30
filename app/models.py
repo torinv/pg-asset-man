@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 class Item(models.Model):
 	item_name = models.CharField(max_length=50)
@@ -71,7 +72,17 @@ class Bin(models.Model):
 	bin_id = models.AutoField(primary_key=True)
 
 	def __str__(self):
-		return self.card_name
+		return self.bin_name
 
 	def get_absolute_url(self):
 		return reverse("bin_edit", kwargs={"pk": self.pk})
+
+
+class ReleaseNote(models.Model):
+	note_name = models.CharField(max_length=20)
+	note_stamp = models.DateTimeField(auto_now_add=True)
+	note_body = models.CharField(max_length=2000)
+
+	def __str__(self):
+		return self.note_name
+	

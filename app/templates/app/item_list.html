@@ -4,11 +4,13 @@
 {% block itemcarrot %} >{% endblock %}
 
 {% block content %}
-<div class="flex">
-<a class="btn btn-primary" href="{% url 'item_new' %}" role="button">
-    <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
-    Create New Item
-</a>&nbsp;&nbsp;&nbsp;
+{% if perms.app.create_item %}
+    <div class="flex">
+    <a class="btn btn-primary" href="{% url 'item_new' %}" role="button">
+        <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
+        Create New Item
+    </a>&nbsp;&nbsp;&nbsp;
+{% endif %}
 <form action="{% url 'item_search_results' %}" method="get">
   <input name="q" type="text" placeholder="Search items... ">
 </form>
@@ -30,8 +32,12 @@
         <td>{{ item.item_location }}</td>
         <td>{{ item.item_qty }}</td>
         <td>
-            <a href="{% url 'item_edit' item.item_id %}">Edit</a>
-            <a href="{% url 'item_delete' item.item_id %}">Delete</a>
+            {% if perms.app.edit_item %}
+                <a href="{% url 'item_edit' item.item_id %}">Edit</a>
+            {% endif %}
+            {% if perms.app.delete_item %}
+                <a href="{% url 'item_delete' item.item_id %}">Delete</a>
+            {% endif %}
         </td>
     </tr>
     {% empty %}
