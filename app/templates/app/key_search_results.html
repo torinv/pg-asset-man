@@ -4,7 +4,12 @@
 {% block keycarrot %} >{% endblock %}
 
 {% block content %}
-<h1> Key Search Results </h1>
+<form action="{% url 'key_search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search keys... ">
+</form>
+</div>
+
+<h3> Key Search Results </h3>
 <table border="1">
     <tr>
         <th>Name</th>

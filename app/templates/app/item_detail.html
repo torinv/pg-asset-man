@@ -4,9 +4,10 @@
 {% block itemcarrot %} >{% endblock %}
 
 {% block content %}
-<h1>Item Detail</h1>
-<h3><b>Name</b> : {{ object.item_name }}</h3>
-<h3><b>Location</b> : {{ object.item_location }}</h3>
-<h3><b>Quantity</b> : {{ object.item_qty }}</h3>
-<h3><b>Description</b> : {{ object.item_longdescription }}</h3>
+<h2>Item Detail</h2>
+<hr>
+<h4><b>Name</b> : {{ object.item_name }}</h4>
+<h4><b>Location</b> : {{ object.item_location }}</h4>
+<h4><b>Quantity</b> : {{ object.item_qty }}</h4>
+<h4><b>Description</b> : {{ object.item_longdescription }}</h4>
 {% endblock %}

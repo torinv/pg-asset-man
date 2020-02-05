@@ -4,8 +4,9 @@
 {% block cardcarrot %} >{% endblock %}
 
 {% block content %}
-<h1>Card Detail</h1>
-<h3><b>Name</b> : {{ object.card_name }}</h3>
-<h3><b>Owner</b> : {{ object.get_card_owner_display }}</h3>
-<h3><b>Location</b> : {{ object.card_location }}</h3>
+<h2>Card Detail</h2>
+<hr>
+<h4><b>Name</b> : {{ object.card_name }}</h4>
+<h4><b>Owner</b> : {{ object.get_card_owner_display }}</h4>
+<h4><b>Location</b> : {{ object.card_location }}</h4>
 {% endblock %}

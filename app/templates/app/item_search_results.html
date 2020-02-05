@@ -4,19 +4,12 @@
 {% block itemcarrot %} >{% endblock %}
 
 {% block content %}
-<div class="flex">
-<a class="btn btn-primary" href="{% url 'item_new' %}" role="button">
-    <img src="{% static 'plus.svg' %}" width="27" height="27"></img>
-    Create New Item
-</a>&nbsp;&nbsp;&nbsp;
 <form action="{% url 'item_search_results' %}" method="get">
   <input name="q" type="text" placeholder="Search items... ">
 </form>
 </div>
 
-
-
-<h1> Item Search Results </h1>
+<h3> Item Search Results </h3>
 <table border="1">
     <tr>
         <th>Name</th>

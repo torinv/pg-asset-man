@@ -4,8 +4,9 @@
 {% block keycarrot %} >{% endblock %}
 
 {% block content %}
-<h1>Key Detail</h1>
-<h3><b>Name</b> : {{ object.key_name }}</h3>
-<h3><b>Owner</b> : {{ object.get_key_owner_display }}</h3>
-<h3><b>Location</b> : {{ object.key_location }}</h3>
+<h2>Key Detail</h2>
+<hr>
+<h4><b>Name</b> : {{ object.key_name }}</h4>
+<h4><b>Owner</b> : {{ object.get_key_owner_display }}</h4>
+<h4><b>Location</b> : {{ object.key_location }}</h4>
 {% endblock %}

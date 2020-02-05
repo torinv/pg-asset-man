@@ -1,1 +1,0 @@
-web: gunicorn assman.wsgi --log-file -

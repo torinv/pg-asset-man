@@ -4,7 +4,12 @@
 {% block bincarrot %} >{% endblock %}
 
 {% block content %}
-<h1> Bin Search Results </h1>
+<form action="{% url 'bin_search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search bins... ">
+</form>
+</div>
+
+<h3> Bin Search Results </h3>
 <table border="1">
     <tr>
         <th>Name</th>
