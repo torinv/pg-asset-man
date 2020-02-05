@@ -1,5 +1,0 @@
-venv/
-*.sqlite3
-Procfile
-requirements.txt
-runtime.txt
