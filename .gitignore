@@ -4,3 +4,4 @@ app/migrations
 app/__pycache__
 assman/__pycache__
 db.sqlite3
+.DS_Store
