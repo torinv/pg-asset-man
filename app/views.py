@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, render_to_response
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.db.models import Q
@@ -182,6 +182,14 @@ class BinSearchResultsView(LoginRequiredMixin, ListView):
 			return object_list
 
 		else: raise ValueError("Invalid search query")
+
+
+# Help/about view
+class Help(LoginRequiredMixin, TemplateView):
+	template_name = 'app/help.html'
+
+class About(LoginRequiredMixin, TemplateView):
+	template_name = 'app/about.html'
 
 
 # Custom error views

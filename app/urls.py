@@ -32,5 +32,9 @@ urlpatterns = [
 	path('new_bin', views.BinCreate.as_view(), name='bin_new'),
 	path('edit/bin_<int:pk>', views.BinUpdate.as_view(), name='bin_edit'),
 	path('delete/bin_<int:pk>', views.BinDelete.as_view(), name='bin_delete'),
-	path('bin_search', views.BinSearchResultsView.as_view(), name='bin_search_results')
+	path('bin_search', views.BinSearchResultsView.as_view(), name='bin_search_results'),
+
+	# Help/about urls
+	path('help', views.Help.as_view(), name='help'),
+	path('about', views.About.as_view(), name='about')
 ]
