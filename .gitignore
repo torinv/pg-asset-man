@@ -1,7 +1,6 @@
 app/migrations
 /.vscode
-/venv
-app/__pycache__
-assman/__pycache__
+/app/__pycache__
+/assman/__pycache__
 db.sqlite3
 .DS_Store
